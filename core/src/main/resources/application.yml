@@ -1,0 +1,47 @@
+## Server Properties
+server:
+  port: 6789
+  compression.enabled: true
+  max-http-header-size: 20000
+
+grpc:
+  port: 6790
+
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration, org.springframework.boot.autoconfigure.orm.jpa.HibernateJpaAutoConfiguration
+  ## Data Source Properties
+  datasource:
+    url: jdbc:mysql://localhost:3306/zalopay_sms_core?useSSL=false&serverTimezone=UTC&useLegacyDatetimeCode=false
+    username: root
+    password:
+    # Initialize the datasource with available DDL and DML scripts
+    initialization-mode: never
+    continueOnError: true
+    initialSize: 0
+    timeBetweenEvictionRunsMillis: 5000
+    minEvictableIdleTimeMillis: 5000
+    minIdle: 0
+  ## Hibernate Properties
+  # The SQL dialect makes Hibernate generate better SQL for the chosen database
+  jpa:
+    properties:
+      hibernate:
+        ddl-auto: none
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        jdbc:
+          batch_size: 4
+        order_inserts: true
+  jpa.hibernate.ddl-auto: update
+  ## Jackson Properties
+  jackson:
+    serialization.WRITE_DATES_AS_TIMESTAMPS: false
+    time-zone: UTC
+
+
+## App Properties
+app:
+  jwtSecret: JWTSuperSecretKey
+  jwtExpirationInMs: 604800000
+  jwtPublic: MIIBIjANBgkasdsiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjhldbYQc6jGJ7XquLAk7TkOgL33BSFuOw7DdTLpWdyeNePHKrz/L0L7KqslEE+Fxn5lExjcH06PHm/wPEKcu5IIigYWnQ+5STqnUb5Puy9+cGyYXd6ks/lq38GwhWB1Ybh833rrihTBg4CDb1bFoa/x8O97ujI9OPpC/TNbubUGKDOQKgeIzsNeuSXdDX8H3LJlRWf9nbl7j3Vo1b708iZRnmy6PUqn5hJ0S6uPIiSTqn9OVlxm9kyIh6NwXHVr7gzOI9H+Xjqo5zy5w/J21Ispihy0z3LjD5i6UXyHTXUXDt3i1yVPTyq73hP/xWjRYihXxi9EHn1zd8N7JUnwqwwIDAQAB

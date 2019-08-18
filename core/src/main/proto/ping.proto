@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+// options for Java generated sources
+option java_multiple_files = true;
+option java_package = "com.thinhda.spring.grpc.core.model";
+option java_outer_classname = "CoreGrpcApi";
+
+package sms.core;
+
+message PingRequest {
+    int64 timestamp = 1;
+}
+
+message PingResponse {
+    int64 timestamp = 1;
+}
+
+service CoreService {
+    rpc Ping (PingRequest) returns (PingResponse);
+}
