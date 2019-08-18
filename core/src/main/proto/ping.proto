@@ -13,6 +13,7 @@ message PingRequest {
 
 message PingResponse {
     int64 timestamp = 1;
+    string message = 2;
 }
 
 service CoreService {
