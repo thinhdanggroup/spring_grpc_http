@@ -196,6 +196,7 @@
   </dependencies>
 
   <build>
+    <finalName>app</finalName>
     <extensions>
       <extension>
         <groupId>kr.motd.maven</groupId>
@@ -299,7 +300,6 @@
           <descriptorRefs>
             <descriptorRef>jar-with-dependencies</descriptorRef>
           </descriptorRefs>
-          <outputDirectory>../../dist</outputDirectory>
         </configuration>
         <executions>
           <execution>
