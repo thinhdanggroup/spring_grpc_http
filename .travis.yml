@@ -8,14 +8,7 @@ cache:
   directories:
    - $HOME/.m2
 
-
-jobs:
-  include:
-    - stage: "Build"
-      name: "Build Package"
-      before_script: cd core
-      script: "mvn clean compile"
-    - stage: "Unit-Test"
-      before_script: cd core
-      name: "Unit Test"
-      script: mvn surefire:test
+before_script: cd core
+script: 
+  - mvn clean compile
+  - mvn surefire:test
