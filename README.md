@@ -1,3 +1,5 @@
+![Build Status](https://travis-ci.com/thinhdanggroup/spring_grpc_http.svg?branch=master)
+
 ## Description
 
 This project is a simple example about How to build GRpc and Http API with Spring (without proxy).
