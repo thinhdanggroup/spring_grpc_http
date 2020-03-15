@@ -5,4 +5,4 @@ jdk:
 os:
   - linux
 
-script: mvn clean install
+script: cd core && mvn clean install
