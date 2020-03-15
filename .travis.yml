@@ -8,4 +8,11 @@ cache:
   directories:
    - $HOME/.m2
 
-script: cd core && mvn clean install
+jobs:
+  include:
+    - stage: "Build"
+      name: "Build Package"
+      script: "mvn clean compile"
+    - stage: "Unit-Test"
+      name: "Unit Test"
+      script: mvn surefire:test
