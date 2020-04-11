@@ -32,7 +32,6 @@ cd core
 mvn clean package
 
 # run binary by java command
-
 java -jar target/app.jar
 ```
 
