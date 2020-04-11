@@ -26,9 +26,6 @@ public class PingControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Autowired
-
-
     @Test
     public void ping() throws Exception {
         PingRequest request = PingRequest.newBuilder()
