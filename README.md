@@ -9,7 +9,7 @@ More detail about this project at [here](https://medium.com/@thinhda/build-servi
 ## Prerequisites
 
 - Java 8
-- Docker 18.09 and later
+- Docker 18.09 or later
 - Maven 3
 
 ## Getting Started
