@@ -53,3 +53,22 @@ curl --location --request POST 'http://localhost:6789/api/ping' \
 # }
    
 ``` 
+
+## Benchmark
+
+Use simple [go client](benchmark/main.go)
+
+```
+go run main.go
+```
+
+Hardware Configurations:
+
+- Macbook pro 2017 Intel Core i5 2.3GHz
+- 16GB RAM
+
+Results
+
+![result](images/benchmark.png)
+
+- Throughput gRPC (*6183req/s*) **>2x** with Http (*2672req/s*)
